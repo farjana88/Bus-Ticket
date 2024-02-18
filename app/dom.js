@@ -25,6 +25,8 @@ let price = 550;
 
 for(const btn of allBtn){
     btn.addEventListener('click', function(){
+        btn.style.backgroundColor = 'green';
+
         countAdd = countAdd + 1;
         countLess = countLess - 1;
         price = price + 550;
@@ -32,7 +34,15 @@ for(const btn of allBtn){
         document.getElementById('seat-less').innerText = countLess;
         document.getElementById('price').innerText = price;
         document.getElementById('sit').innerText = countAdd;
-       const seatBtn = document.getElementById('btn');
-       seatBtn.add.classList = disable;
+    //    const seatBtn = document.getElementById('add-btn');
+    //    seatBtn.add.classList = disable;
+    
     })
 }
+
+for(const btn of allBtn){
+    btn.addEventListener('keyup', function(){
+      btn.style.backgroundColor = 'lightgray';
+    })
+}
+
